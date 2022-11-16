@@ -58,6 +58,22 @@ module.exports = function(config) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
+  config.addFilter("relativeDayString", dateObj => {
+    var post_date = new Date(dateObj).setHours(0, 0, 0, 0);
+    var today = new Date().setHours(0, 0, 0, 0);
+    var drift = today - post_date
+    const ms_day = (24 * 60 * 60 * 1000);
+    if(post_date == today) {
+      return "today"
+    }
+    else if(drift < (ms_day * 7) && drift > 0) {
+      return Math.floor(drift / ms_day).toString() + " days ago"
+    }
+    else {
+      return new Date(dateObj).toISOString().split("T")[0]
+    }
+  });
+
   // Don't ignore the same files ignored in the git repo
   config.setUseGitIgnore(false);
 
