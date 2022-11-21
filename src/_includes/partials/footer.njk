@@ -3,19 +3,16 @@
         <div class="site-foot-nav-left">
             <a aria-current="page" class="" href="/">
                 {{ site.title }}
-            </a> &copy; 2020 – Published with
-            <a class="site-foot-nav-item" href="https://ghost.org" target="_blank" rel="noopener noreferrer">
-                Ghost
-            </a>
+            </a> &copy; 2020 
         </div>
-        {% if collections.docs %}
-            <div class="site-foot-nav-right">
-                {% for doc in collections.docs %}
-                    <a {% if page.url == doc.url %}aria-current="page"{% endif %}  class="site-foot-nav-item" href="{{ doc.url }}">
-                        {{ doc.meta_title if doc.meta_title else doc.title }}
-                    </a>
-                {% endfor %}
-            </div>
-        {% endif %}
+        <div class="site-foot-nav-right">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">
+                <img alt="Creative Commons License" style="border-width:0"
+                 src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" />
+            </a>
+            <br />This work is licensed under a
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License
+            </a>.
+        </div>
     </div>
 </footer>
