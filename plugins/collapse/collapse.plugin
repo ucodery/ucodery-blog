@@ -1,0 +1,13 @@
+[Core]
+name = rest_collapse
+module = collapse
+
+[Nikola]
+compiler = collapse
+PluginCategory = CompilerExtension
+
+[Documentation]
+author = Jeremiah Paige
+version = 0.1
+website = https://example.com
+description = Post of sphinx-toolbox collapse
