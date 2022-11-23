@@ -3926,6 +3926,10 @@ wide-align@^1.1.0:
   dependencies:
     string-width "^1.0.2 || 2"
 
+witch-hazel@theacodes/witchhazel#2022.11.18:
+  version "2021.10.16"
+  resolved "https://codeload.github.com/theacodes/witchhazel/tar.gz/c6bf2d842ed24a14ac9ecabeb517a167082eb949"
+
 with@^7.0.0:
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/with/-/with-7.0.2.tgz#ccee3ad542d25538a7a7a80aad212b9828495bac"
