@@ -9,6 +9,12 @@
                         <img class="site-logo" src="{{ site.logo }}" alt="{{ site.title }}">
                     </a>
                 </div>
+            {% else %}
+                <div class="site-mast-left">
+                    <a {% if page.url == "/" %}aria-current="page"{% endif %} href="{{ site.url | url }}">
+                        <h3 class="site-banner-desc">{{ site.title }}</h3>
+                    </a>
+                </div>
             {% endif %}
             <div class="site-mast-right">
                 <a href="https://twitter.com/ucodery" class="site-nav-item" target="_blank" rel="noopener noreferrer">
