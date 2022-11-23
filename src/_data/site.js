@@ -1,25 +1,26 @@
-require("dotenv").config();
-
-const ghostContentAPI = require("@tryghost/content-api");
-
-// Init Ghost API
-const api = new ghostContentAPI({
-  url: process.env.GHOST_API_URL,
-  key: process.env.GHOST_CONTENT_API_KEY,
-  version: "v2"
-});
-
-// Get all site information
 module.exports = async function() {
-  const siteData = await api.settings
-    .browse({
-      include: "icon,url"
-    })
-    .catch(err => {
-      console.error(err);
-    });
-
-  if (process.env.SITE_URL) siteData.url = process.env.SITE_URL;
-
-  return siteData;
+  return {
+    "title": "μCodery",
+    "url": "https://blog.ucodery.com/",
+    "language": "en",
+    "lang": "en",
+    "description": "one coder's distillation of thought",
+    "cover_image": "/img/backdrop.jpg",
+    "feed": {
+      "subtitle": "one coder's distillation of thought",
+      "filename": "feed.xml",
+      "path": "/feed/feed.xml",
+      "id": "https://blog.ucodery.com/"
+    },
+    "jsonfeed": {
+      "path": "/feed/feed.json",
+      "url": "https://blog.ucodery.com/feed/feed.json"
+    },
+    "author": {
+      "name": "Jeremiah Paige",
+      "email": "ucodery@example.com",
+      "url": "https://blog.ucodery.com/about-me/",
+      "twitter": "https://twitter.com/ucodery"
+    }
+  }
 };
