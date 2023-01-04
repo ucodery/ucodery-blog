@@ -1,0 +1,28 @@
+---
+permalink: '.well-known/webfinger'
+eleventyExcludeFromCollections: true
+dynamicPermalink: false
+---
+{
+    "subject": "acct:ucodery@fosstodon.org",
+    "aliases": [
+        "https://fosstodon.org/@udocery",
+        "https://fosstodon.org/users/udocery"
+    ],
+    "links": [
+        {
+            "rel": "http://webfinger.net/rel/profile-page",
+            "type": "text/html",
+            "href": "https://fosstodon.org/@udocery"
+        },
+        {
+            "rel": "self",
+            "type": "application/activity+json",
+            "href": "https://fosstodon.org/users/udocery"
+        },
+        {
+            "rel": "http://ostatus.org/schema/1.0/subscribe",
+            "template": "https://techhub.social/authorization_interaction?uri={uri}"
+        }
+    ]
+}
