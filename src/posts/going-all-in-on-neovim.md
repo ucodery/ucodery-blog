@@ -32,6 +32,7 @@ edit () {
 }
 ```
 
+
 This works, but I haven't fixed any of my issues with the alias yet. My biggest pain is that this alias-now-function doesn't block in some cases when I need it to. I am going to make this behavior switch based on an environment variable because I want all arguments and options to pass through to Neovim. When looking at how to implement this blocking behavior I found the very helpful Neovim option `--remote-wait`, however, although it is [documented](https://neovim.io/doc/user/remote.html) it is not yet implemented! The blocking logic will have to be outsourced to bash as well, at least for now.
 ```bash
 edit () {
@@ -51,6 +52,7 @@ edit () {
   fi
 }
 ```
+
 
 Next, I'll tackle the relative path problem. With the current solution relative paths will work, until my bash working directory changes. It is easier and safer to always pass absolute paths to `nvim`.
 ```bash
@@ -75,6 +77,7 @@ edit () {
   fi
 }
 ```
+
 
 Now a quick fix so that an empty files array doesn't produce an error. Rather than return without doing anything, I am opening a scratch buffer in the same way that would happen if `nvim` was executed without arguments. The option `--remote-send` will only work if a Neovim server is already running, unlike the option we've been using so far which can fall back to starting a new server. This is not a problem for me as by now I have committed to Neovim-first terminals.
 ```bash
@@ -103,6 +106,7 @@ edit () {
   fi
 }
 ```
+
 
 This function now solves the failure modes my alias had, but the visual annoyance of my terminal window disappearing is still present. This is another case of behavior that I want configurable based on whether I am using it directly or indirectly (git reading my `$EDITOR`) which means another environment variable. It's a little clunky, but I don't want to block myself from being able to edit a file by any name. The `nvim` option I have been using can take a single command which could be used to split the current window before opening files. Could, except it can't because this is one more case of a feature [documented](https://neovim.io/doc/user/remote.html#clientserver) but not yet implemented. As a workaround, I can send two separate client commands to split and then edit some files.
 ```bash
@@ -139,11 +143,13 @@ edit () {
 }
 ```
 
+
 There are a few more issues to make git happy. First, I need to pass along the `$EDITOR_WAIT` and `$EDITOR_REPLACE` environment variables without mutating our working environment. Also, git wants an executable, not a shell function. I can fix both by making an executable bash file that sources the function and sets the environment var. I could have alternatively exported the function definition so that it is visible in bash script files but by explicitly sourcing the definition, this script will work independently of my rc files.
 ```bash
 #!/usr/bin/env bash
 source ~/.local/lib/edit.bash
 EDIT_REPLACE=yes EDIT_WAIT=yes edit "$@"
 ```
+
 
 With this new executable script placed on `PATH` either `git config --global core.editor` can be set or, for broader reach, export `$EDITOR` to point to this new command.
