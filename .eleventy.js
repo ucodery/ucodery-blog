@@ -5,6 +5,7 @@ const fs = require("fs");
 const pluginRSS = require("@11ty/eleventy-plugin-rss");
 const localImages = require("eleventy-plugin-local-images");
 const lazyImages = require("eleventy-plugin-lazyimages");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 
@@ -73,6 +74,8 @@ module.exports = function(config) {
       }
     }
   });
+
+  config.addPlugin(syntaxHighlight);
 
   // Eleventy configuration
   return {
