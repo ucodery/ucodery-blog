@@ -12,7 +12,7 @@ const htmlMinTransform = require("./src/transforms/html-min-transform.js");
 module.exports = function(config) {
   // Copy the `img` and `css` folders to the output
   config.addPassthroughCopy("src/img");
-  //config.addPassthroughCopy("src/css");
+  config.addPassthroughCopy("src/css");
 
   // Minify HTML
   config.addTransform("htmlmin", htmlMinTransform);
@@ -85,7 +85,7 @@ module.exports = function(config) {
     },
 
     // Files read by Eleventy, add as needed
-    templateFormats: ["css", "njk", "md", "txt"],
+    templateFormats: ["njk", "md", "txt"],
     htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
     passthroughFileCopy: true
