@@ -154,4 +154,4 @@ EDIT_REPLACE=yes EDIT_WAIT=yes edit "$@"
 
 With this new executable script placed on `PATH` either `git config --global core.editor` can be set or, for broader reach, export `$EDITOR` to point to this new command.
 
-I am still running every shell session in a Neovim terminal buffer, and editing every file in standard Neovim buffers. It is a joy to edit files and have them simply appear in my buffers list, a singular Neovim never recursing. I won't be going back to bash being my Personal Development Environment orchestrator.
+I am still running every shell session in a Neovim terminal buffer and editing every file in standard Neovim buffers. It is a joy to edit files and have them simply appear in my buffers list, a singular Neovim never recursing. I won't be going back to bash being my Personal Development Environment orchestrator.
