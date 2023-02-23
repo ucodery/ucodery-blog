@@ -1284,11 +1284,11 @@ pre[class*="language-"] {
 
 .token.attr-value,
 .token.attr-value .punctuation {
-	color: #dcc8ff;
+	color: #f8f8f2;
 }
 
 .token.attr-value .punctuation:first-child {
-	color: #dcc8ff;
+	color: #f8f8f2;
 }
 
 .token.url {
@@ -1333,5 +1333,5 @@ code.language-css .token.selector > .token.class,
 code.language-css .token.selector > .token.attribute,
 code.language-css .token.selector > .token.pseudo-class,
 code.language-css .token.selector > .token.pseudo-element {
-	color: #f8f8f2;
+	color: #dcc8ff;
 }
