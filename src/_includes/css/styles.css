@@ -1182,15 +1182,10 @@ h6 {
     margin: -2.25em 0 3em;
 }
 
-/**
- * Witchhazel theme
+/* Witchhazel Prism Theme
  *
  * from the wonderful https://github.com/theacodes/witchhazel/
- *
- * @author Jeremiah Paige <ucodery@gmail.com>
- * @version 1.0
- */
-
+/* ---------------------------------------------------------- */
 code[class*="language-"],
 pre[class*="language-"] {
 	color: #a9b7c6;
