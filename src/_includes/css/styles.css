@@ -1239,8 +1239,8 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code {
-	color: #f8f8f2;
-	background: rgba(220, 200, 255, .25);
+	color: #131218;
+	background: rgba(220, 200, 255, .15);
 }
 
 .token.comment,
