@@ -1262,7 +1262,7 @@ pre[class*="language-"] {
 .token.tag .punctuation,
 .token.doctype,
 .token.builtin {
-	color: #bfbfbf;
+	color: #81ffbe;
 }
 
 .token.entity,
