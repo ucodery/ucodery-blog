@@ -1228,12 +1228,13 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	color: inherit;
-	background: rgba(220, 200, 255, .85);
+	background: #282634;
 }
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
+	color: inherit;
+	background: rgba(220, 200, 255, .85);
 	padding: .1em;
 	border-radius: .3em;
 }
