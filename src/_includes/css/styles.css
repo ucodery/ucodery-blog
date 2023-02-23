@@ -1181,3 +1181,163 @@ h6 {
 .kg-image-card.kg-width-wide + .kg-image-card.kg-width-wide {
     margin: -2.25em 0 3em;
 }
+
+/* Witchhazel Hypercolor Prism Theme
+ *
+ * from the wonderful https://github.com/theacodes/witchhazel/
+/* ---------------------------------------------------------- */
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #a9b7c6;
+	font-family: Consolas, Monaco, 'Andale Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	color: inherit;
+	background: rgba(220, 200, 255, .85);
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	color: inherit;
+	background: rgba(220, 200, 255, .85);
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #282634;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+}
+
+/* Inline code */
+:not(pre) > code {
+	color: #131218;
+	background: rgba(220, 200, 255, .15);
+}
+
+.token.comment,
+.token.prolog,
+.token.cdata {
+	color: #bfbfbf;
+}
+
+.token.delimiter,
+.token.boolean,
+.token.keyword,
+.token.selector,
+.token.important,
+.token.atrule {
+	color: #81ffbe;
+}
+
+.token.operator,
+.token.punctuation,
+.token.attr-name {
+	color: #ffb8d1;
+}
+
+.token.tag,
+.token.tag .punctuation,
+.token.doctype,
+.token.builtin {
+	color: #81ffbe;
+}
+
+.token.entity,
+.token.number,
+.token.symbol {
+	color: #c5a3ff;
+}
+
+.token.property,
+.token.constant,
+.token.variable {
+	color: #fff9a3;
+}
+
+.token.string,
+.token.char {
+	color: #81eeff;
+}
+
+.token.attr-value,
+.token.attr-value .punctuation {
+	color: #f8f8f2;
+}
+
+.token.attr-value .punctuation:first-child {
+	color: #f8f8f2;
+}
+
+.token.url {
+	color: #287bde;
+	text-decoration: underline;
+}
+
+.token.function {
+	color: #dcc8ff;
+}
+
+.token.regex {
+	background: #364135;
+}
+
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.inserted {
+	background: #81ffbe;
+}
+
+.token.deleted {
+	background: #dc7070;
+}
+
+code.language-css .token.property,
+code.language-css .token.property + .token.punctuation {
+	color: #ffb8d1;
+}
+
+code.language-css .token.id {
+	color: #f8f8f2;
+}
+
+code.language-css .token.selector > .token.class,
+code.language-css .token.selector > .token.attribute,
+code.language-css .token.selector > .token.pseudo-class,
+code.language-css .token.selector > .token.pseudo-element {
+	color: #f8f8f2;
+}
