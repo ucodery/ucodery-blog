@@ -1228,7 +1228,8 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #282634;
+	color: inherit;
+	background: rgba(220, 200, 255, .85);
 }
 
 /* Inline code */
@@ -1333,5 +1334,5 @@ code.language-css .token.selector > .token.class,
 code.language-css .token.selector > .token.attribute,
 code.language-css .token.selector > .token.pseudo-class,
 code.language-css .token.selector > .token.pseudo-element {
-	color: #dcc8ff;
+	color: #f8f8f2;
 }
