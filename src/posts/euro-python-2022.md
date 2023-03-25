@@ -6,7 +6,6 @@ date: 2022-11-23
 tags:
   - python
   - conference
-  - draft
 layout: layouts/post.njk
 ---
 # EuroPython2022
