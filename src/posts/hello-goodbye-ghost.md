@@ -1,30 +1,33 @@
 ---
 title: Hello Goodbye Ghost
-description: a quick 
+description: a getting started story
+feature_image: /img/ghost-eleventy.png
 date: 2022-11-22
 tags:
   - blogging
-  - draft
 layout: layouts/post.njk
 ---
 
-I have no idea what I am doing on the front end.
-But I have always wanted to start my own blog. My ideas list of things I would post, if I did have a blog started to reach a critical mass.
-I had no idea where to start, but knew I probably wanted a static site. They seem to be fashonable with frontend devs that I follow, and ostensible don't require any javascript knowledge (more on that later). I don't know how to write good javascript, but I know enough to get things done in HTML and CSS.
-But there is a lot more to choose, and I had even less idea about most of those as well. the package manager (because it turns out you need a bit of js to build the static site), the template engine (engines??) the markdown language, ideally a local build+host option, a CMS, a cloud host (always though I would self-host, but realized that was a big reason holding me back), and edge provider. There are all choice some people probably have strong and well-reasoned optionions about; those people probably don't have to look up the definigion of CMS every time they read it, or go to StackOverflow to learn how to write a javascript if statement.
+I have no idea what I am doing building this website.
 
-Hugo was right out based on work.
+But I have always wanted to start my own blog. The list of ideas I would post if I had one has started to reach a critical mass.
 
-I started with Nikola. Great, its static, its mostly Python, where I feel cozy, and it has a lot of plugins. But it has only a few themes, and once you leave the two or three suggested ones, most of the plugins don't actually hook into your pages (goodbye search bar, goodbye Table of Contents). So I re-wrote some plugins and wrote some new ones, but it so quickly felt like a huge mountain of code I was holding over my head. And I still had nowhere to host it.
+I have no idea where to start but know I want a static site. They seem to be fashionable with frontend devs that I follow and ostensibly don't require any javascript knowledge (not really; I feel like no js web is a lie, even when it doesn't make it to the final site). I don't know how to write good javascript, but I know enough to get things done in HTML and CSS. But there is a lot more to choose from than one or two languages for building.
 
-Now I decided I was going to go with Netlifly. Only because it was one of about 4 names that I wrote down as I listened to devs speak about static site services they like.
+I have even less idea what I am doing with those tools and there are so many: the package manager (because it turns out you need a bit of js to build even the static site), the template engine (engines??) the markup language, ideally a local build+host option, a CMS, a cloud host, and edge provider. These are all choices others probably have strong and well-reasoned opinions about; those people probably also don't have to look up the definition of CMS every time they read it or go to StackOverflow to learn how to write a javascript if statement. I am just picking parts based on discoverability and how they make me feel.
 
-the first hit on a search engine was Netlifly + Ghost + eleventy
-It looked beautiful. It has all the types of formatting I wanted and not much more. It looked beautiful. It didn't have a phone app, but it is a PWA and useing it felt so good; I was going to write so many posts with this service.
+I started with Nikola. It seemed great. It's static, it's mostly Python, where I feel cozy and safe, and it has a lot of plugins. But it has only a few themes, and once you leave the two or three suggested ones, most of the plugins no longer hook into your pages (goodbye search bar, goodbye table of contents). So I re-wrote some plugins and wrote some new ones, but it so quickly felt like a huge mountain of code. And I still had nowhere to host it.
 
-but then I found out its themes don't translate over to a static site. Not even the base one. So I had to maintian that myself.
-then I found out that none of the cards translate ove rto a static site. So I would have to re-create them or not use any cards.
-So why am I using Ghost at all??
-there is a lot of friently help, in GH or the forums, or email. But I am doing all the work myself.
+So back to square one and I decided I needed to select a hosting service first. I had always thought I would self-host, but after years of turning over the idea of blogging in my head, I realized that idea was the biggest obstacle holding me back. Since I don't have any hardware ready to serve, I would have to first design and obsess over that project before I could even begin to write anything. Instead, I chose to go with Netlify. Devs that I have heard speak about such things seemed to like the service, and their developer experience has been great since day one.
 
-So ditch Ghost and just do Netlify + eleventy. Its just what I want
+Now I had to return to the problem of choosing a site builder. The first hit on a search engine was Netlify + Ghost + eleventy. It looks beautiful. Ghost has all the types of formatting I want and not much more. I could start writing right away and with its progressive web app, I could even do some drafting while on the go. I was going to write so many posts with this service.
+
+At this point I had written several posts, I had customized the look, and I wanted to get my blog out there. I needed to publish. Luckily there was an example project and blog post from Ghost that took the site as written in the service, turned it into a static site with eleventy, and pushed it to Netlify. I got the entire build and deploy job working after only a few hiccups. I even managed to modify the build process to inject a mastodon badge with a verified link to my fosstodon profile.
+
+But then I found out Ghost's themes don't translate over to a static site. Not even the base one. So I began to maintain static versions of the Ghost themes myself. Then I found out that none of the cards translate over to a static site. So I had to re-create them, using javascript, or not use any cards.
+
+At this point I asked myself, why am I using Ghost at all? I was rewriting everything I liked about the site's look and navigation on my own for eleventy. The Ghost site looks great, way better than anything I could come up with on my own. And there is a lot of friendly help, in github, in the forums, and even by email. But I am doing all the work myself once it gets to a static site.
+
+So I ditched Ghost and went with just Netlify + eleventy. It's just what I want. And everything is saved in a git repo, no online services with some opaque operations, which is what I wanted from the beginning. It's a chore to implement every new feature, but I learn with every commit. This is the sort of adventure I want from my blog.
+
+I have no idea what I am doing building this website. But I am starting to learn.
