@@ -8,7 +8,7 @@ eleventyNavigation:
 {% from "partials/card.njk" import card %}
 
 <section class="post-feed">
-    {% for post in collections.posts %}
+    {% for post in collections.posts | reverse %}
         {% if 'draft' not in post.data.tags %}
             {{ card(post) }}
         {% endif %}
