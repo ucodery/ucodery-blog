@@ -9,6 +9,9 @@
         {% if post.feature_image %}
             <figure class="post-feature-image">
                 <img src="{{ post.feature_image }}" alt="{{ title }}">
+                {% if post.feature_image_attribute %}
+                    <figcaption>{{ post.feature_image_attribute }}</figcaption>
+                {% endif %}
             </figure>
         {% endif %}
         <section class="post-full-content">
