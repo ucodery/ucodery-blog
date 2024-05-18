@@ -1,7 +1,7 @@
 ---
 title: Managing My Python Environments
 description: How I Tame My Python Environmetns
-feature_image: /img/industriala-crane.jpg
+feature_image: /img/industrial-crane.jpg
 feature_image_attribute: Photo by <a href="https://unsplash.com/@rozetsky?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ant Rozetsky</a> on <a href="https://unsplash.com/photos/black-metal-empty-building-SLIFI67jv5k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 date: 2024-05-18
 tags:
