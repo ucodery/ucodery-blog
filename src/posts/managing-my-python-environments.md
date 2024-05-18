@@ -20,8 +20,9 @@ pip confusion, environment corruption or distro corruption. My computer has not 
 superfund site.
 
 # Pyenv
-Pyenv is an awesome tool that when used to its full potential can install new python versions,
-create new virtual environment, and automatically switch the current active environment.
+[Pyenv](https://github.com/pyenv/pyenv) is an awesome tool that when used to its full potential can
+install new python versions, create new virtual environment, and automatically switch the current
+active environment.
 
 ## Installing Pyenv
 As with all other isolation solutions, there is a bit of a bootstrap issue with Pyenv. Pyenv is not
