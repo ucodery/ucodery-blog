@@ -1,8 +1,8 @@
 ---
 title: Managing My Python Environments
 description: How I Tame My Python Environmetns
-feature_image: /img/python-2.jpg
-feature_image_attribute: A Snake
+feature_image: /img/industrial-crane.jpg
+feature_image_attribute: Photo by <a href="https://unsplash.com/@rozetsky?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ant Rozetsky</a> on <a href="https://unsplash.com/photos/black-metal-empty-building-SLIFI67jv5k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 date: 2024-05-18
 tags:
   - python
@@ -20,8 +20,9 @@ pip confusion, environment corruption or distro corruption. My computer has not 
 superfund site.
 
 # Pyenv
-Pyenv is an awesome tool that when used to its full potential can install new python versions,
-create new virtual environment, and automatically switch the current active environment.
+[Pyenv](https://github.com/pyenv/pyenv) is an awesome tool that when used to its full potential can
+install new python versions, create new virtual environment, and automatically switch the current
+active environment.
 
 ## Installing Pyenv
 As with all other isolation solutions, there is a bit of a bootstrap issue with Pyenv. Pyenv is not
@@ -59,7 +60,7 @@ Python versions. This can be done with the command
 ```bash
 cd ~/.pyenv/plugins/python-build; git pull
 ```
-This might not be the obvious solution the problem of Pyenv's index being out-of-date, but if you
+This might not be the obvious solution to the problem of Pyenv's index being out-of-date, but if you
 run `pyenv install` for the version you want even when it's not there, Pyenv will helpfully print
 out the exact command you need to run to update its index.
 
@@ -70,7 +71,7 @@ Python work. I don't use any of the base language version environments directly.
 use-case I have for Python is isolated to its own virtualenv, based on a base language environment.
 
 In addition to managing Python interpreters, Pyenv can also manage virtualenvs, and it manages all
-of mine. It Creating a new virtualenv is a short command:
+of mine. Creating a new virtualenv is a short command:
 ```bash
 pyenv virtualenv 3.12.2 do-work-here
 ```
@@ -97,14 +98,14 @@ The first environment I create on any new machine is not actually `do-work-here`
 I then set as the global environment. This is the only time I set Pyenv's `global`. After `common` I
 create the `home` environment which I set as the local environment for my `HOME` directory.
 
-I intend to never actually interact with the common environment. It is there just to catch any
+I intend to never actually interact with the `common` environment. It is there just to catch any
 situations where I failed to properly set an environment and not let me escape to some system
-Python. I don't put any packages there intentionally.
+Python. I don't put any packages there, intentionally.
 
-The home environment is where I like to mess around, especially in the interactive Python shell.
+The `home` environment is where I like to mess around, especially in the interactive Python shell.
 As it is local to my `HOME`, it generally catches me when I run Python outside of some
 project-specific location. I install a random collection of fun packages here, many of which I have
-recorded in a requirements.txt that I keep with my dot-files; things that make playing easier, like
+recorded in a `requirements.txt` that I keep with my dot-files; things that make playing easier, like
 ipython or rich. I never expect the packages that exist, or their versions, to remain stable in this
 environment. It'll be whatever I whimsically put there. Accordingly, I never expect a tool or
 service to consistently run based off this environment.
@@ -127,8 +128,8 @@ writing some glue code.
 
 Pyenv environments can be named anything but I always make it the same as the directory it is rooted
 in, which is also usually the name of the project, like in the case of a checkout. If the project
-requires a specific version I `pyenv install` it, otherwise I pick a modern already-installed version
-which is easily done with `TAB`.
+requires a specific version I don't have, I `pyenv install` it, otherwise I pick the most modern
+already-installed version which is easily done with `TAB`.
 
 Whenever I find myself in a new workspace The setup is simple and one-time:
 ```bash
@@ -151,7 +152,7 @@ In these cases I use `pyenv shell` along with its builtin ability to expose mult
 once.
 
 Pyenv's `shell` will make the named environments all active at the same time for the rest of the
-current shell session. The `local` environments disappears, but will still be the active one after
+current shell session. The `local` environment disappears, but will still be the active one after
 exiting this session, or in another session open in parallel. When naming `shell` environments I
 always choose the base unnamed python versions. Because the environment manager is going to
 isolate any Python package installs, I don't need to also make a pyenv virtualenv in these cases.
@@ -201,9 +202,3 @@ Also because I know where all virtualenvs are, I know where all installed packag
 important to me as I am always looking inside of my installs. I want to know if I have a
 code example locally of using `HTTPServer`? `grep -R HTTPServer ~/.pyenv/`. Or I want to see an example
 of a `.pyi` file? `find ~/.pyenv/ -type f -name '*.pyi'`.
-
-<!~-
-# Pipx
-I don't. if it has to do with a project, make it part of one of that project's environments.
-If not, install it into the HOME environment, or use your distro package manager
--->
