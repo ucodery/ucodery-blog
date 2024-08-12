@@ -1,7 +1,7 @@
 ---
 title: Convention Words
 description: Special Words in Python
-feature_image: /img/python-1.jpg
+feature_image: /img/ox.jpg
 feature_image_attribute: Photo by <a href="https://unsplash.com/@davidclode?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">David Clode</a> on <a href="https://unsplash.com/photos/pjXcxEAMg40?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 date: 2023-07-19
 tags:
