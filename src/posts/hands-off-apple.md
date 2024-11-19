@@ -39,7 +39,7 @@ Doing some binary delving, I see that all of the known-to-me fake binaries have 
 This works surprisingly well and running the below command reports 77 fake binaries. So far as I can tell, every one is byte for byte identical.
 
 ```
-for b in /usr/bin/*; do if grep -q 'com.apple.dt.xcode_select.tool-shim' $b; then echo $b; fi; done
+$ for b in /usr/bin/*; do if grep -q 'com.apple.dt.xcode_select.tool-shim' $b; then echo $b; fi; done
 ```
 
 Now to remove them.
@@ -49,6 +49,7 @@ Now to remove them.
 ### Delete
 
 This part of MacOS is protected, usually for good reasons. So deleting the fakes is not possible.
+
 ```
 $ sudo rm -f /usr/bin/python3
 rm: /usr/bin/python3: Operation not permitted
@@ -57,10 +58,12 @@ rm: /usr/bin/python3: Operation not permitted
 ### Disable execution
 
 Indeed, no modifications are allowed
+
 ```
-sudo chmod -x /usr/bin/python3
+$ sudo chmod -x /usr/bin/python3
 chmod: Unable to change file mode on /usr/bin/python3: Operation not permitted
 ```
+
 I even reboot into recovery mode, disable SIP, macOS's system integrity protection, and try again. Still not permitted.
 
 As it turns out, these commands live on a disk that is mounted Read-Only, and that mountpoint is then again mounted so that it covers `/usr/bin`. In recovery mode, these commands do not exist. Instead, a more stripped-down directory lives at `/usr` this early in the boot process (one that contains no fake tools, because they are not, in fact, useful for administering a system).
