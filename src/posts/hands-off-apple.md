@@ -2,7 +2,7 @@
 title: Hands Off, Apple!
 description: Removing bloatware in my dev environment
 feature_image: /img/fake-python3.png
-date: 2024-10-16
+date: 2024-11-19
 layout: layouts/post.njk
 ---
 
