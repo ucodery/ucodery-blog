@@ -1,35 +1,53 @@
 {
-  "name": "ucodery-blog",
-  "version": "1.0.0",
-  "description": "ucodery personal blog",
-  "main": ".eleventy.js",
-  "scripts": {
-    "start": "yarn run dev",
-    "dev": "cross-env ELEVENTY_ENV=dev eleventy --serve",
-    "build": "cross-env ELEVENTY_ENV=prod eleventy",
-    "test": "yarn run build",
-    "lint": "eslint . --ext .js --cache"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ucodery/ucodery-blog.git"
-  },
-  "author": "Jeremiah Paige",
-  "license": "CC-BY-NC-SA-4.0",
-  "homepage": "https://blog.ucodery.com",
-  "dependencies": {
-    "@11ty/eleventy": "^1.0.2",
-    "@11ty/eleventy-plugin-rss": "^1.1.1",
-    "clean-css": "^4.2.1",
-    "cross-env": "^7.0.0",
-    "dotenv": "^8.0.0",
-    "eleventy-plugin-lazyimages": "liamfiddler/eleventy-plugin-lazyimages",
-    "eleventy-plugin-local-images": "^0.4.0",
-    "eslint-utils": "3.0.0",
-    "html-minifier": "^4.0.0"
-  },
-  "devDependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.2.0",
-    "eslint": "7.32.0"
-  }
+	"name": "ucodery-blog",
+	"version": "2.0.0",
+	"description": "ucodery personal blog",
+	"type": "module",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"build-nocolor": "cross-env NODE_DISABLE_COLORS=1 npx @11ty/eleventy",
+		"build-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/",
+		"start": "npx @11ty/eleventy --serve --quiet",
+		"start-ghpages": "npx @11ty/eleventy --pathprefix=/eleventy-base-blog/ --serve --quiet",
+		"debug": "cross-env DEBUG=Eleventy* npx @11ty/eleventy",
+		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
+		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
+		"lint": "eslint . --ext .js --cache"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ucodery/ucodery-blog.git"
+	},
+	"author": {
+		"name": "Jeremiah Paige",
+		"email": "ucodery@gmail.com"
+	},
+	"license": "CC-BY-NC-SA-4.0",
+	"engines": {
+		"node": ">=18"
+	},
+	"homepage": "https://blog.ucodery.com",
+	"dependencies": {
+		"clean-css": "^4.2.1",
+		"eleventy-plugin-lazyimages": "liamfiddler/eleventy-plugin-lazyimages",
+		"eleventy-plugin-local-images": "^0.4.0",
+		"html-minifier": "^4.0.0"
+	},
+	"devDependencies": {
+		"@11ty/eleventy": "^3.0.0",
+		"@11ty/eleventy-img": "^6.0.1",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@11ty/eleventy-plugin-rss": "^2.0.2",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"cross-env": "^7.0.3",
+		"eslint-utils": "3.0.0",
+		"eslint": "7.32.0",
+		"html-minifier-terser": "^7.2.0",
+		"luxon": "^3.5.0",
+		"zod": "^3.23.8",
+		"zod-validation-error": "^3.3.1"
+	},
+	"dependencies": {
+		"@zachleat/heading-anchors": "^1.0.1"
+	}
 }

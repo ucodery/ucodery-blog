@@ -54,6 +54,8 @@ typings/
 # Yarn Integrity file
 .yarn-integrity
 
+package-lock.json
+
 # IDE
 .idea/*
 *.iml
@@ -67,4 +69,4 @@ typings/
 .cache/
 yarn-error.log
 .netlify/
-dist
+_site/

@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+title: "All Code Recipes"
+eleventyNavigation:
+  key: "Cookbook"
+  order: 4
+---
+
+{% set postslist = collections.cookbook %}
+{% include "postslist.njk" %}

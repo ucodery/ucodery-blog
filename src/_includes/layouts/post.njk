@@ -1,52 +1,51 @@
-{% extends 'layouts/default.njk' %}
+---
+layout: layouts/base.njk
+---
 
-{% set title = post.title %}
-{% set codeinjection_head = post.codeinjection_head %}
-{% set codeinjection_foot = post.codeinjection_foot %}
+<body>
+	<a href="#skip" class="visually-hidden">Skip to main content</a>
 
-{% block content %}
-    <article class="content">
-        {% if post.feature_image %}
-            <figure class="post-feature-image">
-                <img src="{{ post.feature_image }}" alt="{{ title }}">
-                {% if post.feature_image_attribute %}
-                    <figcaption>{{ post.feature_image_attribute }}</figcaption>
-                {% endif %}
-            </figure>
-        {% endif %}
-        <section class="post-full-content">
-            <h1 class="content-title">{{ title }}</h1>
-            <section class="content-body load-external-scripts">
-                {{ content | safe }}
-            </section>
-        </section>
-    </article>
-{% endblock %}
+	{% include "components/header.njk" %}
 
-{%- block seo -%}
-    <!--Twitter Card-->
-    <meta name="twitter:site" content="{{ site.author.twitter }}">
-    <meta name="twitter:creator" content="{{ site.author.twitter }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="{{ site.url + page.url }}">
-    <meta name="twitter:title" content="{{ title }} – {{ site.title }}">
-    <meta name="twitter:description" content="{{ post.excerpt }}">
-    <meta name="twitter:image" content="{{ post.feature_image }}">
+	<main id="skip">
+		<heading-anchors>
+			{# Only include the syntax highlighter CSS on blog posts, included with the CSS per-page bundle #}
+			{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss %}
+			{%- css %}{% include "src/public/css/prism-diff.css" %}{%- endcss %}
+			<h1>{{ title }}</h1>
 
-    <!--Schema-->
-    <link rel="author" href="{{ post.primary_author.website }}">
-    <link rel="publisher" href="{{ site.url }}">
-    <meta itemprop="name" content="{{ title }} – {{ site.title }}">
-    <meta itemprop="description" content="{{ post.excerpt }}">
-    <meta itemprop="image" content="{{ post.feature_image }}">
+			{% if image.image_src %}
+				<figure class="post-feature-image">
+					<img src="{{ image.image_src }}" alt="{{ title }}">
+					{% if image.image_attribute %}
+						<figcaption>{{ image.image_attribute | safe }}</figcaption>
+					{% endif %}
+				</figure>
+			{% endif %}
 
-    <!-- Facebook OpenGraph -->
-    <meta property="og:url" content="{{ site.url + page.url }}">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="{{ title }} – {{ site.title }}">
-    <meta property="og:image" content="{{ post.feature_image }}">
-    <meta property="og:description" content="{{ post.excerpt }}">
-    <meta property="og:site_name" content="{{ site.title }}">
-    <meta property="og:locale" content="{{ site.lang }}">
-    <meta property="article:author" content="{{ site.url }}">
-{%- endblock -%}
+			<ul class="post-metadata">
+				<li><time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate }}</time></li>
+				{%- for tag in tags | filterTagList %}
+				{%- set tagUrl %}/tags/{{ tag | slugify }}/{% endset %}
+				<li><a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a>{%- if not loop.last %}, {% endif %}</li>
+				{%- endfor %}
+			</ul>
+
+			{{ content | safe }}
+
+			{%- if collections.posts %}
+			{%- set previousPost = collections.posts | getPreviousCollectionItem %}
+			{%- set nextPost = collections.posts | getNextCollectionItem %}
+			{%- if nextPost or previousPost %}
+			<ul class="repel">
+				{%- if previousPost %}<li class="repel-left">← Previous<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+				{%- if nextPost %}<li class="repel-right">Next →<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+			</ul>
+			{%- endif %}
+			{%- endif %}
+		</heading-anchors>
+	</main>
+
+	{% include "components/footer.njk" %}
+
+</body>

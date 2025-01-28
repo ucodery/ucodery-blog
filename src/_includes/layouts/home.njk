@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+---
+
+<body style="background-image: url('/img/backdrop.jpg'); background-position: center; background-size: cover">
+	<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+	{% include "components/header.njk" %}
+
+{% if title or description %}
+	<div class="banner">
+		{% if title %}
+			<h1 class="banner-title">{{ title }}</h1>
+		{% endif %}
+		{% if title %}
+			<p class="banner-description">{{ description }}</p>
+		{% endif %}
+	</div>
+{% endif %}
+
+	<main id="skip" style="background-color: var(--background-color)">
+		<heading-anchors>
+			{{ content | safe }}
+		</heading-anchors>
+	</main>
+
+	{% include "components/footer.njk" %}
+
+</body>
