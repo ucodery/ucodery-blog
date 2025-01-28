@@ -73,7 +73,7 @@ project was using all open standards, nothing can be brought along in the migrat
 ## Groups For Me But Not For Thee
 
 Python packages have supported enhanced install targets called extras since their inception. It is a way of getting a package and everything it requires
-*plus* some extra packages it doesn't require, but might make it better. Examples of extras are `requests[socks]` or `boto3[crt]` which install the requested
+_plus_ some extra packages it doesn't require, but might make it better. Examples of extras are `requests[socks]` or `boto3[crt]` which install the requested
 package, plus some extra packages otherwise not included without an extra. All extras do is make the install footprint bigger, but the implication is that
 the installed package will recognize the presence of optional dependencies and expose more features.
 
@@ -139,7 +139,7 @@ Although Poetry doesn't support `===`, it does have a secret `=` operator. Its m
 documentation. But it is accepted as a Version Constraint in `pyproject.toml` or from the command line and not converted to any other format.
 
 In addition to creating new version operators, Poetry also has co-opted the meaning of the existing Version Scheme to mean something different
-for itself. While the PyPA spec for Version Scheme clearly states "a _trailing_ .* is permitted on public version identifiers" (emphasis mine),
+for itself. While the PyPA spec for Version Scheme clearly states "a _trailing_ `.*` is permitted on public version identifiers" (emphasis mine),
 Poetry will accept `*` as a full version scheme (in place of any number segment).
 
 ## Thou Shall Know Thy Python Compatibility
@@ -163,9 +163,10 @@ declared for your project it throws an error.
 For instance, if a project that wants to be compatible with every possible Python3 version (`^3`) tries to add `black`, it isn't allowed. Note that it
 doesn't matter if black is added to the base dependencies, to a group, to extras, or marked as optional. When Poetry locks a project it considers all
 possible multiverses and requires that every one is possible to resolve. This is the error it will show when trying to resolve this conflict:
+
 > The current project's supported Python range (>=3,<4) is not compatible with some of the required packages Python requirement:
-> 
->   \- black requires Python >=3.8, so it will not be satisfied for Python >=3,<3.8
+>
+> \- black requires Python >=3.8, so it will not be satisfied for Python >=3,<3.8
 
 This leaves the author with a few possible resolutions:
 
@@ -179,7 +180,7 @@ This leaves the author with a few possible resolutions:
 
 3. **use black but don't tell Poetry**
 
-    why use a builder, package solver/manager that you don't tell all of your dependencies about? A developer should not need to go behind their tooling's back to accomplish their needs
+   why use a builder, package solver/manager that you don't tell all of your dependencies about? A developer should not need to go behind their tooling's back to accomplish their needs
 
 4. **change your supported Python version to align with Black**
 
@@ -196,9 +197,10 @@ every dependency range (with `^`) these Python ranges are shrinking even faster 
 
 Let's return to the example and take option 4: we set the Python compatibility of our package to `>=3.8`, the exact same as `black==24.8.0`. Now our package and
 its single dependency are in complete agreement about supported Python versions and Poetry is happy. Next, we go to add our second dependency, `textual`:
+
 > The current project's supported Python range (>=3.8) is not compatible with some of the required packages Python requirement:
-> 
->   \- textual requires Python <4.0.0,>=3.8.1, so it will not be satisfied for Python >=3.8,<3.8.1 || >=4.0.0
+>
+> \- textual requires Python <4.0.0,>=3.8.1, so it will not be satisfied for Python >=3.8,<3.8.1 || >=4.0.0
 
 So `textual` has a Python version ceiling! We have two dependencies, both with a floor of `3.8` (almost), but `black` has no ceiling, while `textual`
 does. We must again restrict our supported Python versions because a dependency of ours has put a ceiling on Python versions not yet released. You can

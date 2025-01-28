@@ -8,6 +8,7 @@ tags:
   - conference
 layout: layouts/post.njk
 ---
+
 # EuroPython 2021
 
 Another fully-online conference amid the COVID pandemic. Despite being organized and attended virtually, this conference was huge, with the number of talks alone tipping 100. Even with the huge amount of content, there was a clear focus on Data Science as over 1/3 of the content was targeting this discipline.

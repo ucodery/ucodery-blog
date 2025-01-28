@@ -8,7 +8,9 @@ tags:
   - python
 layout: layouts/post.njk
 ---
+
 # Convention Words
+
 Python has keywords. These are words that have special meaning in Python programs and cannot be used for variable names. Recently, Python has also gained soft keywords. These are words that have special meaning to the language, but at the same time can still be used for variable names. But did you know that Python also has convention words?
 
 Let's review. Keywords are a type of reserved word or a name that a programming language has removed from the choice of otherwise legal variable names. Some keywords in Python are `class`, `if`, and `None`. Unlike some other languages, Python uses all its reserved words as keywords. This means that every word that is taken out of use as a name has a specific meaning in the language. (Other than dunders, the infinite set of which are reserved).
