@@ -1,20 +1,20 @@
 import {
+	HtmlBasePlugin,
 	IdAttributePlugin,
 	InputPathToUrlTransformPlugin,
-	HtmlBasePlugin,
 } from "@11ty/eleventy";
-import htmlmin from "html-minifier-terser";
-import { feedPlugin } from "@11ty/eleventy-plugin-rss";
-import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
-import pluginNavigation from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
-
+import { feedPlugin } from "@11ty/eleventy-plugin-rss";
+import htmlmin from "html-minifier-terser";
 import pluginFilters from "./src/_config/filters.js";
+import pluginNavigation from "@11ty/eleventy-navigation";
+import pluginSyntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import site from "./src/_data/site.js";
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
 	// Drafts, see also _data/eleventyDataSchema.js
+	/* eslint-disable-next-line no-unused-vars */
 	eleventyConfig.addPreprocessor("drafts", "*", (data, content) => {
 		if (data.draft && process.env.ELEVENTY_RUN_MODE === "build") {
 			return false;
@@ -23,7 +23,7 @@ export default async function (eleventyConfig) {
 
 	eleventyConfig.addTransform("htmlmin", function (content) {
 		if ((this.page.outputPath || "").endsWith(".html")) {
-			let minified = htmlmin.minify(content, {
+			const minified = htmlmin.minify(content, {
 				useShortDoctype: true,
 				removeComments: true,
 				collapseWhitespace: true,
@@ -115,9 +115,9 @@ export default async function (eleventyConfig) {
 		// selector: "h1,h2,h3,h4,h5,h6", // default
 	});
 
-	eleventyConfig.addShortcode("currentBuildDate", () => {
-		return new Date().toISOString();
-	});
+	eleventyConfig.addShortcode("currentBuildDate", () =>
+		new Date().toISOString(),
+	);
 }
 
 export const config = {

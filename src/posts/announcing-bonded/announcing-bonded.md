@@ -14,5 +14,4 @@ Much of the effort was put into expanding the examples file. I originally create
 
 I think I was successful in that I was able to reduce the number of required options for my original examples and still get passing checks. I wanted projects adopting bonded to be able to do so with as little configuration as possible and start to see benefits right away. And I was able to achieve my other goal for creating based on real projects: I was able to [open the first issue found by bonded](https://github.com/Textualize/rich/pull/2884).
 
-
 As a bit of a bonus, I also found an [issue in importlib_metadata](https://github.com/python/importlib_metadata/pull/432), which is a library that makes bonded's work much easier.

@@ -10,7 +10,7 @@ layout: layouts/post.njk
 
 I recently got a new macbook from my employer and need to set it up so I can perform my coding tasks. It has been going fine as I installed my minimum software requirements and cloned my dotfiles. However I've started getting weird errors whenever I drift away from my core projects.
 
-To my complete shock, my new computer came with binaries, shipped in the new base install, that don't do anything except raise an error asking you to install command line developer tools. Not only do these commands not do anything but return an error and spit stderr at me, but they also make a new window appear to ask me twice if I want to install these missing command line developer tools. *Even when the invoking process is not attached to a tty, or in the foreground of a process group*. It's like trying to work on an infected machine with popups that just never go away.
+To my complete shock, my new computer came with binaries, shipped in the new base install, that don't do anything except raise an error asking you to install command line developer tools. Not only do these commands not do anything but return an error and spit stderr at me, but they also make a new window appear to ask me twice if I want to install these missing command line developer tools. _Even when the invoking process is not attached to a tty, or in the foreground of a process group_. It's like trying to work on an infected machine with popups that just never go away.
 
 In the past, developing with a company macbook, I have installed xcode _lite_ and even occasionally xcode _heavy_. But this time I decided to take a fresh approach with this blank system and manage my entire dev stack explicitly and declaratively using a system package manager. I don't need any of Apple's tools to do my job. And I especially don't need fake tools that advertise installing a huge and unnecessary dependency.
 
@@ -110,7 +110,7 @@ I am starting to get annoyed.
 
 ### Enter hard mode
 
-I said before that `/usr/bin` (actually `/`) is already a mount from some other directory. I find that the final mount, overlaying and hiding several previous ones, comes from  `/Volumes/Machintosh HD/`, which is my primary system partition.
+I said before that `/usr/bin` (actually `/`) is already a mount from some other directory. I find that the final mount, overlaying and hiding several previous ones, comes from `/Volumes/Machintosh HD/`, which is my primary system partition.
 
 I want these fake programs gone from _there_. But the mount is Read-Only. So I re-enter recovery mode, the closest thing to single-user mode I have. I unmount the disk, then re-mount it in rw mode to a temporary directory. I check one of the fake programs, `/usr/bin/python3`, under the new mount-point and confirm it is the bad python. I delete this file. No errors. I unmount the disk and remount the partition at root using Disk Recovery. I verify the bad python is still gone! I reboot my machine and check `/usr/bin`. The bad python is back!!!! (ノÒ益Ó)ノ彡▔▔▏
 

@@ -1,7 +1,9 @@
 # ucodery personal blog
+
 https://blog.ucodery.com/
 
 ### TODO
+
 - auto alt-text and caption for all images
 - images on post pages
 - YouTube links
@@ -12,6 +14,7 @@ https://blog.ucodery.com/
   - remove or at least redo syntaxhighlight
 
 ### Resources
+
 [unsplash](https://unsplash.com/)
 [public images](https://pdimagearchive.org)
 

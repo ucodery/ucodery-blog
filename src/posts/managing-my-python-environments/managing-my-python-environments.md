@@ -8,7 +8,9 @@ tags:
   - python
 layout: layouts/post.njk
 ---
+
 # Managing My Python Environments
+
 Python environment isolation is an important part of Python development hygiene.
 
 If you are working with Python to any degree, virtual environments are a must. And I work with
@@ -20,15 +22,18 @@ pip confusion, environment corruption or distro corruption. My computer has not 
 superfund site.
 
 # Pyenv
+
 [Pyenv](https://github.com/pyenv/pyenv) is an awesome tool that when used to its full potential can
 install new python versions, create new virtual environment, and automatically switch the current
 active environment.
 
 ## Installing Pyenv
+
 As with all other isolation solutions, there is a bit of a bootstrap issue with Pyenv. Pyenv is not
 written in Python, so there is no circular setup to worry about there, but this means we need some
 other way to install Pyenv. While most distro package managers have Pyenv, I have always installed
 directly from the source with the command:
+
 ```bash
 curl https://pyenv.run | bash
 ```
@@ -36,14 +41,17 @@ curl https://pyenv.run | bash
 Once `pyenv` is installed the following command must be run for it to do its job. I have this line
 in my `.bashrc` so it is already working wherever I open a shell but if you just installed this tool
 you will have to run it now.
+
 ```bash
 eval "$(pyenv init -)"
 ```
 
 ## Managing Python versions
+
 Once Pyenv is on my system I use it to install all Python interpreters that I will use. I abandon
 the idea that there even might be a Python on my system that was not put there by Pyenv. So my first
 step is to install that first Python version with the simple command:
+
 ```bash
 pyenv install 3.12.2
 ```
@@ -57,9 +65,11 @@ what patch versions it knows about.
 
 If the version you need isn't known about, you will have to tell Pyenv to refresh its index of
 Python versions. This can be done with the command
+
 ```bash
 cd ~/.pyenv/plugins/python-build; git pull
 ```
+
 This might not be the obvious solution to the problem of Pyenv's index being out-of-date, but if you
 run `pyenv install` for the version you want even when it's not there, Pyenv will helpfully print
 out the exact command you need to run to update its index.
@@ -72,6 +82,7 @@ use-case I have for Python is isolated to its own virtualenv, based on a base la
 
 In addition to managing Python interpreters, Pyenv can also manage virtualenvs, and it manages all
 of mine. Creating a new virtualenv is a short command:
+
 ```bash
 pyenv virtualenv 3.12.2 do-work-here
 ```
@@ -83,9 +94,11 @@ There are a few ways to have Pyenv automatically activate virtualenvs for me, bu
 `local` solution.
 
 Once I am in the directory I want this environment activated for, like a project root, I run
+
 ```bash
 pyenv local do-work-here
 ```
+
 After that I don't think about Pyenv any more. When I am in this project, at any level, this Python
 and any executables it has installed are available to me, and when I'm not they're not.
 
@@ -111,8 +124,9 @@ environment. It'll be whatever I whimsically put there. Accordingly, I never exp
 service to consistently run based off this environment.
 
 My setup would look this:
+
 ```bash
-pyenv install 3.12.2 
+pyenv install 3.12.2
 pyenv virtualenv 3.12.2 common
 pyenv global common
 cd  # if I'm not already HOME
@@ -132,6 +146,7 @@ requires a specific version I don't have, I `pyenv install` it, otherwise I pick
 already-installed version which is easily done with `TAB`.
 
 Whenever I find myself in a new workspace The setup is simple and one-time:
+
 ```bash
 cd new-idea
 pyenv virtualenv 3.12.2 new-idea --download # existing version, name matches dir
