@@ -1,16 +1,31 @@
 ---
-layout: layouts/default.njk
+layout: layouts/home.njk
+title: μCodery
+description: "one coder's distillation of thought"
 eleventyNavigation:
-  key: Home
+  key: "μCodery"
   order: 1
+numberOfLatestPostsToShow: 9
 ---
+{% set postsCount = collections.posts | length %}
+{% set latestPostsCount = postsCount | min(numberOfLatestPostsToShow) %}
 
-{% from "partials/card.njk" import card %}
+<h1>Latest Posts</h1>
 
-<section class="post-feed">
-    {% for post in collections.posts | reverse %}
-        {% if 'draft' not in post.data.tags %}
-            {{ card(post) }}
-        {% endif %}
-    {% endfor %}
-</section>
+{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+{% set postslistCounter = postsCount %}
+{% include "postslist.njk" %}
+
+{% set morePosts = postsCount - numberOfLatestPostsToShow %}
+{% if morePosts > 0 %}
+<p>{{ morePosts }} more post{% if morePosts != 1 %}s{% endif %} can be found in <a href="posts.njk">the archive</a>.</p>
+{% endif %}
+
+{# List every content page in the project #}
+{#
+<ul>
+	{%- for entry in collections.all %}
+	<li><a href="{{ entry.url }}"><code>{{ entry.url }}</code></a></li>
+	{%- endfor %}
+</ul>
+#}

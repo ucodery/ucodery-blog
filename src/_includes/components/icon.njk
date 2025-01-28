@@ -1,0 +1,15 @@
+{% macro icon(props) %}
+<svg
+    width="{{ props.width if props.width else "22" }}"
+    height="{{ props.height if props.height else "22" }}"
+    class="nav-icon nav-icon--{{ props.id if props.id else "link" }}"
+    role="img"
+    aria-labelledby="{{ props.id if props.id else "link" }}-icon"
+>
+    <title id="{{ props.id if props.id else "link" }}">{{ props.id if props.id else "link" }}</title>
+    <use
+        xlink:href="#{{ props.id if props.id else "link" }}-icon"
+        fill="{{ color if color else "currentColor" }}"
+    ></use>
+</svg>
+{% endmacro %}
