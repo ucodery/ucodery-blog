@@ -1,11 +1,10 @@
 ---
 title: The Trouble With Poetry
 description: Why not to use the poetry packaging tool
-feature_image: /img/shipwreck.jpg
+feature_image: ./shipwreck.jpg
 date: 2024-08-12
 tags:
   - python
-layout: layouts/post.njk
 ---
 
 # The Trouble With Poetry
@@ -139,8 +138,8 @@ Although Poetry doesn't support `===`, it does have a secret `=` operator. Its m
 documentation. But it is accepted as a Version Constraint in `pyproject.toml` or from the command line and not converted to any other format.
 
 In addition to creating new version operators, Poetry also has co-opted the meaning of the existing Version Scheme to mean something different
-for itself. While the PyPA spec for Version Scheme clearly states "a _trailing_ `.*` is permitted on public version identifiers" (emphasis mine),
-Poetry will accept `*` as a full version scheme (in place of any number segment).
+for itself. While the PyPA spec for Version Scheme clearly states "a _trailing_ ._ is permitted on public version identifiers" (emphasis mine),
+Poetry will accept `_` as a full version scheme (in place of any number segment).
 
 ## Thou Shall Know Thy Python Compatibility
 

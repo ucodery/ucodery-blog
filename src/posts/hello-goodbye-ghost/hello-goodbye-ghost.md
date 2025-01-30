@@ -1,11 +1,10 @@
 ---
 title: Hello Goodbye Ghost
 description: a getting started story
-feature_image: /img/ghost-eleventy.png
+feature_image: ./ghost-eleventy.png
 date: 2022-11-22
 tags:
   - blogging
-layout: layouts/post.njk
 ---
 
 I have no idea what I am doing building this website.

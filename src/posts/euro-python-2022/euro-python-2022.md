@@ -1,12 +1,11 @@
 ---
 title: EuroPython 2022
 description: recap
-feature_image: /img/europython2022.png
+feature_image: ./europython2022.png
 date: 2022-11-23
 tags:
   - python
   - conference
-layout: layouts/post.njk
 ---
 
 # EuroPython2022

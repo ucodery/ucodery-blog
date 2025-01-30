@@ -1,12 +1,11 @@
 ---
 title: PyCon 2022
 description: recap
-feature_image: /img/pycon2022.png
+feature_image: ./pycon-2022.png
 date: 2022-06-14
 tags:
   - python
   - conference
-layout: layouts/post.njk
 ---
 
 # PyCon US 2022
