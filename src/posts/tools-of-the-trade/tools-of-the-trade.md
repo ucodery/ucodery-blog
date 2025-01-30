@@ -1,10 +1,9 @@
 ---
 title: Tools of the Trade
 description: my best setup for writing code
-feature_image: /img/wood_tools.jpg
+feature_image: ./wood_tools.jpg
 date: 2022-11-07
 tags: []
-layout: layouts/post.njk
 ---
 
 # Tools of the Trade

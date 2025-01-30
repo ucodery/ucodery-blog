@@ -1,12 +1,11 @@
 ---
 title: EuroPython 2021
 description: recap
-feature_image: /img/europython2021.png
+feature_image: ./europython2021.png
 date: 2021-10-12
 tags:
   - python
   - conference
-layout: layouts/post.njk
 ---
 
 # EuroPython 2021

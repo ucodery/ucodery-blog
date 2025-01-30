@@ -1,12 +1,9 @@
 ---
 title: Hands Off, Apple!
 description: Removing bloatware in my dev environment
-feature_image: /img/fake-python3.png
+feature_image: ./fake-python3.png
 date: 2024-11-19
-layout: layouts/post.njk
 ---
-
-# Hands Off, Apple!
 
 I recently got a new macbook from my employer and need to set it up so I can perform my coding tasks. It has been going fine as I installed my minimum software requirements and cloned my dotfiles. However I've started getting weird errors whenever I drift away from my core projects.
 

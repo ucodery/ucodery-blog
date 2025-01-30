@@ -1,12 +1,11 @@
 ---
 title: NeovimConf 2022
 description: recap
-feature_image: /img/neovimconf-logo.svg
+feature_image: ./neovimconf-logo.svg
 date: 2022-10-17
 tags:
   - vim
   - conference
-layout: layouts/post.njk
 ---
 
 # NeovimConf 2022

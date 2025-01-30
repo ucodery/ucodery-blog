@@ -1,11 +1,10 @@
 ---
 title: Announcing Bonded
 description: Some thoughts on the creation of bonded
-feature_image: /img/warehouse.png
+feature_image: ./warehouse.png
 date: 2023-03-24
 tags:
   - python
-layout: layouts/post.njk
 ---
 
 This week I was able to publish the first two beta releases of bonded on [PyPI](https://pypi.org/project/bonded/) thanks in part to some extra time I had attending PyCascades.

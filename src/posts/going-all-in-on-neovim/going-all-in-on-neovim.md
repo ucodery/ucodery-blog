@@ -1,11 +1,10 @@
 ---
 title: Going All in on Neovim
 description: How I moved from running nvim in bash to running bash in nvim
-feature_image: /img/nvim-ception.png
+feature_image: ./nvim-ception.png
 date: 2023-02-02
 tags:
   - vim
-layout: layouts/post.njk
 ---
 
 After [NeoVimConf 2022](/posts/neovimconf-2022) I decided to go all in with Neovim as my [Personal Development Environment](https://www.youtube.com/watch?v=QMVIJhC9Veg). For me, this means Neovim needs to morph into something that is not just where I write all my code, but also where I run all my code.
