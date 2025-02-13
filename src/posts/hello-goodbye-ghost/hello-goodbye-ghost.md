@@ -2,6 +2,7 @@
 title: Hello Goodbye Ghost
 description: a getting started story
 feature_image: ./ghost-eleventy.png
+feature_image_description: The 11ty and Ghost logos conatained within separate but overlapping circles
 date: 2022-11-22
 tags:
   - blogging

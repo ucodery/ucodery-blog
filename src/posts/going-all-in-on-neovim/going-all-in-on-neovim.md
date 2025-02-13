@@ -2,6 +2,7 @@
 title: Going All in on Neovim
 description: How I moved from running nvim in bash to running bash in nvim
 feature_image: ./nvim-ception.png
+feature_image_description: A terminal showing a NeoVim program open in a terminal window of another NeoVim program, itself open in the terminal window of another NeoVim window... going on 10 times
 date: 2023-02-02
 tags:
   - vim

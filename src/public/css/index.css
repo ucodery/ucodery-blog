@@ -94,6 +94,10 @@ figure {
   margin-left: 0px;
   margin-right: 0px;
 }
+figcaption {
+  text-align: right;
+  font-size: 0.2em;
+}
 
 p:last-child {
   margin-bottom: 0;

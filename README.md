@@ -5,7 +5,7 @@ https://blog.ucodery.com/
 ### TODO
 
 - auto alt-text and caption for all images
-- images on post pages
+- Also mastodon button to reply to main thread
 - YouTube links
 - code highlighter
 - more use of color palette
