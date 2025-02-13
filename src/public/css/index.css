@@ -18,6 +18,7 @@
   --color-shadow: #3b364e;
 
   --background-color: var(--color-old-paper);
+  --foreground-color: var(--color-green-felt);
 
   --text-color: var(--color-gray-90);
   --text-color-link: #082840;
@@ -30,6 +31,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: var(--color-green-felt);
+    --foreground-color: var(--color-old-paper);
 
     --text-color: var(--color-gray-30);
     --text-color-link: #1493fb;
@@ -49,14 +51,21 @@
 
 html,
 body {
-  padding: 0;
   margin: 0;
   font-family: var(--font-family);
   color: var(--text-color);
   background-color: var(--background-color);
 }
 html {
+  padding: 0;
   overflow-y: scroll;
+}
+body {
+  background-image: url("/img/backdrop.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 0 0 1.5em 0;
+  position: relative;
 }
 
 /* https://www.a11yproject.com/posts/how-to-hide-content/ */
@@ -134,6 +143,11 @@ main :first-child {
 }
 footer {
   border-top: 1px dashed var(--color-gray-20);
+}
+
+.floating-content {
+  background-color: var(--background-color);
+  box-shadow: 0 0 12px 6px var(--background-color);
 }
 
 .banner {
@@ -233,7 +247,7 @@ div.share {
   border-top-left-radius: 7px 7px;
   border-bottom-right-radius: 7px 7px;
   border-bottom-left-radius: 7px 7px;
-  background: var(--color-old-paper);
+  background: var(--foreground-color);
 }
 button.mastodon-share {
   cursor: pointer;
