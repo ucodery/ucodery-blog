@@ -2,7 +2,8 @@
 layout: layouts/base.njk
 ---
 
-<body style="background-image: url('/img/backdrop.jpg'); background-position: center; background-size: cover">
+<body>
+  <p style="position: absolute; padding: 0; margin: 0 0.5em 0.5em 0; right: 0; bottom: 0; font-size: 0.5em">Elizabeth Hiner, all rights reserved</p>
 	<a href="#skip" class="visually-hidden">Skip to main content</a>
 
 	{% include "components/header.njk" %}
@@ -18,7 +19,7 @@ layout: layouts/base.njk
 	</div>
 {% endif %}
 
-	<main id="skip" style="background-color: var(--background-color)">
+	<main id="skip" class="floating-content">
 		<heading-anchors>
 			{{ content | safe }}
 		</heading-anchors>
