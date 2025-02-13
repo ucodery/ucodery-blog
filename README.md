@@ -1,9 +1,11 @@
 # ucodery personal blog
+
 https://blog.ucodery.com/
 
 ### TODO
+
 - auto alt-text and caption for all images
-- images on post pages
+- Also mastodon button to reply to main thread
 - YouTube links
 - code highlighter
 - more use of color palette
@@ -12,5 +14,8 @@ https://blog.ucodery.com/
   - remove or at least redo syntaxhighlight
 
 ### Resources
+
 [unsplash](https://unsplash.com/)
+[public images](https://pdimagearchive.org)
+
 [example](https://github.com/11ty/eleventy-base-blog)

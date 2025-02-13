@@ -1,0 +1,34 @@
+<div class="share">
+	{% from "components/icon.njk" import icon %}
+	<button class="mastodon-share">
+	  {{ icon({ id: 'mastodon', width: '15', height: '15'}) }}
+		<u class="mastodon-share">
+	   Share this post on
+		</u>
+	</button>
+	<input type="text" class="mastodon-share" name="mastodon-instance" placeholder="mastodon.social">
+	<script>
+	const share = document.querySelector('button.mastodon-share');
+	const provided_instance = document.querySelector('input[name="mastodon-instance"]');
+
+	function do_share() {
+	  let instance = (provided_instance.value)? provided_instance.value: provided_instance.placeholder;
+		let message = "{{ "Check out this post by @ucodery@fosstodon.org: " + title + "\n" | urlencode }}";
+		let post_url = "{{ site.url + page.url | urlencode }}";
+
+	  window.open(`https://${instance}/share?text=${message}${post_url}`);
+	}
+
+	share.addEventListener('click', (e) => {
+	  do_share();
+	});
+	provided_instance.addEventListener('click', (e) => {
+	  e.stopPropagation();
+	});
+	provided_instance.addEventListener('keypress', (e) => {
+		if (e.key == "Enter") {
+        do_share();
+    }
+		});
+	</script>
+</div>

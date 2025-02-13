@@ -1,0 +1,10 @@
+---
+layout: layouts/home.njk
+title: "All TILs"
+eleventyNavigation:
+  key: "TIL"
+  order: 3
+---
+
+{% set postslist = collections.tils %}
+{% include "postslist.njk" %}

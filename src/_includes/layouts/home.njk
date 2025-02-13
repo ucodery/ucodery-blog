@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+---
+
+<body style="background-image: url('/img/backdrop.jpg'); background-position: center; background-size: cover;">
+  <p style="position: absolute; padding: 0; margin: 0 0.5em 0.5em 0; right: 0; bottom: 0; font-size: 0.5em">Elizabeth Hiner, all rights reserved</p>
+	<a href="#skip" class="visually-hidden">Skip to main content</a>
+
+	{% include "components/header.njk" %}
+
+{% if title or description %}
+	<div class="banner">
+		{% if title %}
+			<h1 class="banner-title">{{ title }}</h1>
+		{% endif %}
+		{% if title %}
+			<p class="banner-description">{{ description }}</p>
+		{% endif %}
+	</div>
+{% endif %}
+
+	<main id="skip" class="floating-content">
+		<heading-anchors>
+			{{ content | safe }}
+		</heading-anchors>
+	</main>
+
+	{% include "components/footer.njk" %}
+
+</body>

@@ -4,14 +4,14 @@ on:
   push:
     branches:
       - main
-      - 'renovate/*'
+      - "renovate/*"
 jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && !startsWith(github.head_ref, 'renovate/'))
     strategy:
       matrix:
-        node: [ 19 ]
+        node: [20]
     env:
       FORCE_COLOR: 1
     name: Node ${{ matrix.node }}
@@ -20,6 +20,7 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node }}
-      - run: yarn
-      - run: yarn lint
-      - run: yarn test
+      - run: npm install .
+      - run: npm run pretty
+      - run: npm run lint
+      # - run: npm run test

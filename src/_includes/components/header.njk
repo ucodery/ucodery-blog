@@ -1,0 +1,37 @@
+<header>
+	{% include "components/icons.njk" %}
+	{% from "components/icon.njk" import icon %}
+	{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
+	<ul class="repel">
+		<li class="repel-left">
+			<nav>
+				<h2 class="visually-hidden">Top level navigation menu</h2>
+				<ul class="nav">
+				{%- for entry in collections.all | eleventyNavigation %}
+					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} class="nav-link" aria-current="page"{% endif %}>{{ entry.title }}</a></li>
+				{%- endfor %}
+				</ul>
+			</nav>
+		</li>
+		<li class="repel-right">
+			<nav>
+				<ul>
+					<li class="nav-item">
+						<a href="https://fosstodon.org/@ucodery" class="nav-link" rel="noopener noreferrer me">
+								{{ icon({ id: 'mastodon' }) }}
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="https://github.com/ucodery" class="nav-link" rel="noopener noreferrer">
+								{{ icon({ id: 'github' }) }}
+						</a>
+					</li>
+					<li class="nav-item">
+						<a href="../feed/feed.xml" class="nav-link" rel="noopener noreferrer">
+								{{ icon({ id: 'rss' }) }}
+						</a>
+					</li>
+				</ul>
+			</nav>
+		</li>
+</header>
