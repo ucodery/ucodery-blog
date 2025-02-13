@@ -2,6 +2,7 @@
 title: EuroPython 2022
 description: recap
 feature_image: ./europython2022.png
+feature_image_description: EuroPython 2022 logo
 date: 2022-11-23
 tags:
   - python

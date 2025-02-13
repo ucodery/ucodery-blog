@@ -2,6 +2,7 @@
 title: NeovimConf 2022
 description: recap
 feature_image: ./neovimconf-logo.svg
+feature_image_description: NeoVimConf 2022 logo
 date: 2022-10-17
 tags:
   - vim

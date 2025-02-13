@@ -2,6 +2,7 @@
 title: PyCon 2022
 description: recap
 feature_image: ./pycon2022.png
+feature_image_description: PyCon 2022 logo
 date: 2022-06-14
 tags:
   - python

@@ -2,6 +2,7 @@
 title: Hands Off, Apple!
 description: Removing bloatware in my dev environment
 feature_image: ./fake-python3.png
+feature_image_description: A terminal window where the python3 command was executed but a long error including "No developer tools were found, requesting install.". Hovering over top of the terminal window is a popup stating "The python3 command requires the command line developer tools. Would you like to instal the tools now?"
 date: 2024-11-19
 ---
 

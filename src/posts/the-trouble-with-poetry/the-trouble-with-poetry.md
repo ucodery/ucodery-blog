@@ -2,6 +2,8 @@
 title: The Trouble With Poetry
 description: Why not to use the poetry packaging tool
 feature_image: ./shipwreck.jpg
+feature_image_description: the bow of a shipwreck rising out of a sandy beach. All that remains are rusted iron supports, reminiscent of as ship skeleton
+feature_image_attribute: Jeremiah Paige, all rights reserved
 date: 2024-08-12
 tags:
   - python

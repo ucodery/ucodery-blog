@@ -16,7 +16,7 @@ layout: layouts/base.njk
 
 			{% if image.image_src %}
 				<figure class="post-feature-image">
-					<img src="{{ image.image_src }}" alt="{{ title }}">
+					<img src="{{ image.image_src }}"{% if image.image_description %}alt="{{ image.image_description }}"{% endif %}>
 					{% if image.image_attribute %}
 						<figcaption>{{ image.image_attribute | safe }}</figcaption>
 					{% endif %}

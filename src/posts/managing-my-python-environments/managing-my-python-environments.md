@@ -3,6 +3,7 @@ title: Managing My Python Environments
 description: How I Tame My Python Environmetns
 feature_image: ./industrial-crane.jpg
 feature_image_attribute: Photo by <a href="https://unsplash.com/@rozetsky?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ant Rozetsky</a> on <a href="https://unsplash.com/photos/black-metal-empty-building-SLIFI67jv5k?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+feature_image_description: The interior of a giant manufacturary. There are multiple levels of catwalks and huge cranes criss-crossing the dim industrial space.
 date: 2024-05-18
 tags:
   - python

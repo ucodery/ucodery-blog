@@ -2,6 +2,8 @@
 title: Tools of the Trade
 description: my best setup for writing code
 feature_image: ./wood_tools.jpg
+feature_image_attribute: Photo by <a href="https://unsplash.com/@pjswinburn?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Philip Swinburn</a> on <a href="https://unsplash.com/photos/carving-tool-set-vS7LVkPyXJU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+feature_image_description: A rustic wall full of old looking but neatly organized hanging woodworking tools
 date: 2022-11-07
 tags: []
 ---

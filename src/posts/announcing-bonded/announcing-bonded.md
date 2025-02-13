@@ -2,6 +2,7 @@
 title: Announcing Bonded
 description: Some thoughts on the creation of bonded
 feature_image: ./warehouse.png
+feature_image_description: The logo of the bonded project. A black and white sketch of a warehouse on the dockfront
 date: 2023-03-24
 tags:
   - python

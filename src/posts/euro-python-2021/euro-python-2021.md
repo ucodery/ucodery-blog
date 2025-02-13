@@ -2,6 +2,7 @@
 title: EuroPython 2021
 description: recap
 feature_image: ./europython2021.png
+feature_image_description: EuroPython 2021 logo
 date: 2021-10-12
 tags:
   - python
