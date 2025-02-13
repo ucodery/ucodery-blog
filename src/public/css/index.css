@@ -61,9 +61,6 @@ html {
 	overflow-y: scroll;
 }
 body {
-	background-image: url("/img/backdrop.jpg");
-	background-position: center;
-	background-size: cover;
 	padding: 0 0 1.5em 0;
 	position: relative;
 }
