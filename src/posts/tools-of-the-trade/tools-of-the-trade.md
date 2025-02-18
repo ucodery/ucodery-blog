@@ -8,8 +8,6 @@ date: 2022-11-07
 tags: []
 ---
 
-# Tools of the Trade
-
 All code has to be written somewhere and the environment in which it is written helps to shape it, either explicitly or implicitly. This is where I like to do my best work and why I think it matters.
 
 ## System

@@ -9,8 +9,6 @@ tags:
   - conference
 ---
 
-# EuroPython2022
-
 In July 2022 I attended EuroPython virtually. While it was held in person this year, they had a remote venue as well and when my travel plans got stuck they let me switch to present virtually, which was a relief. In addition to the always-present topics at Python conferences such as web or data science, harmful AI was also a front-and-center theme.
 
 ## Killer Robots Considered Harmful

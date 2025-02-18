@@ -9,8 +9,6 @@ tags:
   - python
 ---
 
-# Managing My Python Environments
-
 Python environment isolation is an important part of Python development hygiene.
 
 If you are working with Python to any degree, virtual environments are a must. And I work with
