@@ -9,8 +9,6 @@ tags:
   - conference
 ---
 
-# PyCon US 2022
-
 The first in-person Python conference in three years! It was nice to be back even if the event wasn't quite at previous sizes. Python in the browser was the biggest reveal and probably ignited the most discussion, even weeks after the closing session. Also the new buzzword of supply chains has spawned a whole host of new tools, businesses, standards, and talks.
 
 ## Łukasz Langa

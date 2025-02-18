@@ -144,7 +144,7 @@ footer {
 
 .floating-content {
 	background-color: var(--background-color);
-	box-shadow: 0 0 12px 6px var(--background-color);
+	box-shadow: 0 0 12px 13px var(--background-color);
 }
 
 .banner {
@@ -216,6 +216,9 @@ header {
 
 /* Nav */
 .nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	padding: 0;
 	margin: 0;
 	list-style: none;
