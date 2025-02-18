@@ -4,7 +4,9 @@ https://blog.ucodery.com/
 
 ### TODO
 
-- auto alt-text and caption for all images
+- modularize:
+  - .repel as nujucks call()
+  - image metadata as frontmatter sub-object
 - Also mastodon button to reply to main thread
 - YouTube links
 - code highlighter
