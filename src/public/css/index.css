@@ -163,6 +163,7 @@ footer {
 
 .repel {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	gap: 0.5em 1em;
 	list-style: "";
@@ -215,7 +216,6 @@ header {
 
 /* Nav */
 .nav {
-	display: flex;
 	padding: 0;
 	margin: 0;
 	list-style: none;

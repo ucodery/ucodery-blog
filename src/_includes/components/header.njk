@@ -3,9 +3,9 @@
 	{% from "components/icon.njk" import icon %}
 	{#- Read more about `eleventy-navigation` at https://www.11ty.dev/docs/plugins/navigation/ #}
 	<ul class="repel">
+		<h2 class="visually-hidden">Top level navigation menu</h2>
 		<li class="repel-left">
 			<nav>
-				<h2 class="visually-hidden">Top level navigation menu</h2>
 				<ul class="nav">
 				{%- for entry in collections.all | eleventyNavigation %}
 					<li class="nav-item"><a href="{{ entry.url }}"{% if entry.url == page.url %} class="nav-link" aria-current="page"{% endif %}>{{ entry.title }}</a></li>
@@ -13,9 +13,10 @@
 				</ul>
 			</nav>
 		</li>
+		<li></li>
 		<li class="repel-right">
 			<nav>
-				<ul>
+				<ul class="nav">
 					<li class="nav-item">
 						<a href="https://fosstodon.org/@ucodery" class="nav-link" rel="noopener noreferrer me">
 								{{ icon({ id: 'mastodon' }) }}

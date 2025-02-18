@@ -46,6 +46,7 @@ layout: layouts/base.njk
 			{%- if nextPost or previousPost %}
 			<ul class="repel">
 				<li class="repel-left">{%- if previousPost %}← Previous<br> <a href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}</li>
+				<li></li>
 				<li class="repel-right">{%- if nextPost %}Next →<br><a href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}</li>
 			</ul>
 			{%- endif %}
