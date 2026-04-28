@@ -11,7 +11,8 @@
 		"debugstart": "cross-env DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
 		"benchmark": "cross-env DEBUG=Eleventy:Benchmark* npx @11ty/eleventy",
 		"lint": "eslint .",
-		"pretty": "prettier . --check"
+		"pretty": "prettier . --check",
+		"git-set-dates": "node scripts/git-set-dates.mjs"
 	},
 	"repository": {
 		"type": "git",
