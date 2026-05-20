@@ -205,7 +205,12 @@ pre:not([class*="language-"]) {
 	overflow-x: auto;
 }
 code {
-	word-break: break-all;
+	word-break: break-word;
+	/*hardcoded to match PrismJS*/
+	/*TODO: match the currently active Prism attributes; requires variables*/
+	background-color: #272822;
+	color: #f8f8f2;
+	border-radius: 0.3em;
 }
 
 /* Header */
